@@ -22,13 +22,13 @@ const Bed = ({ name, deleteSensorData }) => {
   const forceUpdate = useCallback(() => updateState({}), []);
 
   const recordss = [
-    {"deviceId":"myFirstDevice","windSpeed":13.786287266480517,"temperature":27.059010662714613,"humidity":60.16157929750032},
-    {"deviceId":"myFirstDevice","windSpeed":13.786287266480517,"temperature":27.059010662714613,"humidity":60.16157929750032},
-    {"deviceId":"myFirstDevice","windSpeed":13.786287266480517,"temperature":27.059010662714613,"humidity":60.16157929750032},
-    {"deviceId":"myFirstDevice","windSpeed":13.786287266480517,"temperature":27.059010662714613,"humidity":60.16157929750032},
-    {"deviceId":"myFirstDevice","windSpeed":13.786287266480517,"temperature":27.059010662714613,"humidity":60.16157929750032},
-    {"deviceId":"myFirstDevice","windSpeed":13.786287266480517,"temperature":27.059010662714613,"humidity":60.16157929750032},
-    {"deviceId":"myFirstDevice","windSpeed":13.786287266480517,"temperature":27.059010662714613,"humidity":60.16157929750032}
+    { "deviceId": "myFirstDevice", "windSpeed": 13.786287266480517, "temperature": 27.059010662714613, "humidity": 60.16157929750032 },
+    { "deviceId": "myFirstDevice", "windSpeed": 13.786287266480517, "temperature": 27.059010662714613, "humidity": 60.16157929750032 },
+    { "deviceId": "myFirstDevice", "windSpeed": 13.786287266480517, "temperature": 27.059010662714613, "humidity": 60.16157929750032 },
+    { "deviceId": "myFirstDevice", "windSpeed": 13.786287266480517, "temperature": 27.059010662714613, "humidity": 60.16157929750032 },
+    { "deviceId": "myFirstDevice", "windSpeed": 13.786287266480517, "temperature": 27.059010662714613, "humidity": 60.16157929750032 },
+    { "deviceId": "myFirstDevice", "windSpeed": 13.786287266480517, "temperature": 27.059010662714613, "humidity": 60.16157929750032 },
+    { "deviceId": "myFirstDevice", "windSpeed": 13.786287266480517, "temperature": 27.059010662714613, "humidity": 60.16157929750032 }
   ]
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const Bed = ({ name, deleteSensorData }) => {
     console.log("hti")
     const intervalId = setInterval(() => {
       //   sensorCheckData(1 * 60 * 1000);
-      sendHttpRequest('GET', 'http://localhost:8000' + '/allReading', null).then((data) => {
+      sendHttpRequest('GET', 'https://health-dashboard-backend.herokuapp.com' + '/allReading', null).then((data) => {
         if (data.status == 200) {
           console.log(data)
           records.push(data.data[0])
@@ -79,7 +79,7 @@ const Bed = ({ name, deleteSensorData }) => {
   //     sendHttpRequest('GET', 'http://localhost:8000' + '/allReading', null).then((data) => {
   //       if (data.status == 200) {
   //         console.log(data)
-         
+
   //         records.push(data.data[0])
   //         setRecord(records)
   //         console.log(records)
@@ -119,7 +119,7 @@ const Bed = ({ name, deleteSensorData }) => {
           <div className="info-chart-container">
             <div className="card-container card-info-container">
               <h2>Cardio</h2>
-              <FaHeartbeat size={64} />
+              <div className="card-info-img"><FaHeartbeat size={64} /></div>
               <h2></h2>
             </div>
             <div className="card-container card-chart-container">
@@ -139,7 +139,7 @@ const Bed = ({ name, deleteSensorData }) => {
           <div className="info-chart-container">
             <div className="card-container card-info-container">
               <h2>SpO2</h2>
-              <GiLungs size={64} />
+              <div className="card-info-img"><GiLungs size={64} /></div>
               <h2></h2>
             </div>
             <div className="card-container card-chart-container">
@@ -161,7 +161,7 @@ const Bed = ({ name, deleteSensorData }) => {
           <div className="info-chart-container">
             <div className="card-container card-info-container">
               <h2>Temperature</h2>
-              <WiThermometer size={64} />
+              <div className="card-info-img"><WiThermometer size={64} /></div>
               <h2></h2>
             </div>
             <div className="card-container card-chart-container">
