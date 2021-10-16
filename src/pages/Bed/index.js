@@ -48,7 +48,7 @@ const Bed = ({ name, deleteSensorData }) => {
       }).catch((err) => {
         console.log(err);
       });
-    }, 4000);
+    }, 1000);
     // setClock(new Date().toLocaleTimeString('pt-BR'));
     return () => {
       clearInterval(intervalId);
