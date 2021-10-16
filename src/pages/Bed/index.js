@@ -127,7 +127,7 @@ const Bed = ({ name, deleteSensorData }) => {
                 key={count}
                 data={records}
                 dataKeyX="timestamp"
-                dataKeyY="windSpeed"
+                dataKeyY="heartrate"
                 syncId="anyId"
                 fillColor="#2fc432"
                 unit=" bpm"
@@ -147,7 +147,7 @@ const Bed = ({ name, deleteSensorData }) => {
                 key={count}
                 data={records}
                 dataKeyX="timestamp"
-                dataKeyY="temperature"
+                dataKeyY="spO2"
                 syncId="anyId"
                 fillColor="#2076e0"
                 unit=" %"
@@ -169,7 +169,7 @@ const Bed = ({ name, deleteSensorData }) => {
                 key={count}
                 data={records}
                 dataKeyX="timestamp"
-                dataKeyY="humidity"
+                dataKeyY="bodyTemp"
                 syncId="anyId"
                 fillColor="#e02041"
                 unit=" ºC"
