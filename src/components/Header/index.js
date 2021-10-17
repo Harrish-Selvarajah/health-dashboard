@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 // import { connect } from 'react-redux';
 
 import { AiOutlineHome, AiOutlineHistory } from 'react-icons/ai';
+import { FaUserNurse, FaBed } from 'react-icons/fa';
+import { GiLabCoat, GiBunkBeds } from 'react-icons/gi';
 // import { sensorCheckData } from '../../actions';
 
 // import { DASHBOARD_NAME, MINUTES_TO_EXPIRE } from '../../../public/settings';
@@ -31,11 +33,14 @@ const Header = ({ sensorCheckData }) => {
       </div>
       <div className="left-items-container">
         <div className="left-button-container">
-          <Link className="button-link" to="/" title="Página Incial">
-            <AiOutlineHome size={32} />
+          <Link className="button-link" to="/" title="Beds">
+            <FaBed size={32} />
           </Link>
-          <Link className="button-link" to="/history" title="Relatório de Sinais Vitais">
-            <AiOutlineHistory size={32} />
+          <Link className="button-link" to="/history/doctor" title="Doctor Recmendation">
+            <GiLabCoat size={32} />
+          </Link>
+          <Link className="button-link" to="/history/nurse" title="Nurse Recomendation">
+            <FaUserNurse size={32} />
           </Link>
         </div>
       </div>

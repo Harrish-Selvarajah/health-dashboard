@@ -1,4 +1,5 @@
-export const BASE_URL = 'http://localhost:8000/';
+export const BASE_URL = 'http://localhost:8000';
+// 'https://health-dashboard-backend.herokuapp.com'
 
 const axios = require('axios').default;
 

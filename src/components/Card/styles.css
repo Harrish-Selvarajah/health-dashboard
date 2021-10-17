@@ -1,6 +1,6 @@
 .card-container-holder {
-  width: 250px;
-  height: 350px;
+  width: 300px;
+  height: 500px;
   margin: 20px;
   perspective: 1100px;
 }
@@ -68,7 +68,7 @@
 }
 
 .card-container .alert-bar.expired {
-  background: #333333;
+  background: #e02041;
 }
 
 .card-container .content {

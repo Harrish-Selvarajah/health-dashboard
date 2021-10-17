@@ -21,27 +21,7 @@ const TimeSerieLineChart = ({
 }) => {
 
   useEffect(() => {
-    // get api 
     console.log("hti")
-    // const intervalId = setInterval(() => {
-    //   //   sensorCheckData(1 * 60 * 1000);
-    //   sendHttpRequest('GET', 'http://localhost:8000' + '/allReading', null).then((data) => {
-    //     if (data.status == 200) {
-    //       console.log(data)
-    //       records.push(data.data[0])
-    //       setRecord(records)
-    //       const windSpeed = 10 + (Math.random() * 4);
-    //       setCount(windSpeed)
-    //       forceUpdate()
-    //     }
-    //   }).catch((err) => {
-    //     console.log(err);
-    //   });
-    // }, 4000);
-    // // setClock(new Date().toLocaleTimeString('pt-BR'));
-    // return () => {
-    //   clearInterval(intervalId);
-    // };
   }, []);
 
 
