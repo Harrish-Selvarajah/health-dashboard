@@ -96,6 +96,25 @@
   height: 250px;
 }
 
+.card-container-holder-bed {
+  width: 305px;
+  height: 350px;
+  margin: 20px;
+  perspective: 1100px;
+}
+
+.card-container {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(30, 30, 30, 0.2);
+  transition: box-shadow 0.3s, transform 1s;
+}
+
+
 @media only screen and (max-width: 600px) {
   .hb-report-container {
     display: none;

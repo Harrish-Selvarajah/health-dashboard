@@ -7,10 +7,13 @@ import './styles.css';
 
 const DownloadCSV = ({ reports, filename, title }) => {
   const headers = [
-    { label: 'Data', key: 'timestamp' },
-    { label: 'Frequência Cardíaca (bpm)', key: 'beat' },
-    { label: 'SpO2 (%)', key: 'spo2' },
-    { label: 'Temperatura (°C)', key: 'temp' },
+    { label: 'Data', key: '_ts' },
+    { label: 'Heart Rate', key: 'heartrate' },
+    { label: 'SpO2 (%)', key: 'spO2' },
+    { label: 'Body Temperature (°C)', key: 'bodyTemp' },
+    { label: 'Room Temperature (°C)', key: 'roomTemp' },
+    { label: 'CO 2 (%)', key: 'co2' },
+    { label: 'ECG', key: 'ecg' },
   ];
 
   const data = reports.map((report) => {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // import { connect } from 'react-redux';
 
-import { AiOutlineHome, AiOutlineHistory } from 'react-icons/ai';
+import { AiOutlineHome, AiOutlineHistory, AiOutlineInfoCircle } from 'react-icons/ai';
 import { FaUserNurse, FaBed } from 'react-icons/fa';
 import { GiLabCoat, GiBunkBeds } from 'react-icons/gi';
 // import { sensorCheckData } from '../../actions';
@@ -41,6 +41,9 @@ const Header = ({ sensorCheckData }) => {
           </Link>
           <Link className="button-link" to="/history/nurse" title="Nurse Recomendation">
             <FaUserNurse size={32} />
+          </Link>
+          <Link className="button-link" title="View Patient Details">
+            <AiOutlineInfoCircle size={32} />
           </Link>
         </div>
       </div>

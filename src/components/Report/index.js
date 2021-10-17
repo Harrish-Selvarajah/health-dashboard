@@ -14,39 +14,15 @@ const Report = ({ name, reports }) => {
   return (
     <div className="report-container">
       <DownloadCSV
-        title="Exportar: Relatório CSV"
+        title="Export CSV"
         reports={reports}
-        filename={`${name} - relatório_${new Date().toLocaleString('pt-BR')}.csv`}
+        filename={`${name}-${new Date().toLocaleString('pt-BR')}.csv`}
       />
-      <h1>{name}</h1>
       <div className="table-container">
         <table className="report-table">
-          <tbody>
-            <tr>
-              <th className="sensor-data-col">
-                <FiClock size={20} title="Horário da medição" />
-              </th>
-              <th className="sensor-data-col">
-                <FaHeartbeat size={20} title="Freq. Cardíaca" />
-              </th>
-              <th className="sensor-data-col">
-                <GiLungs size={20} title="SpO2" />
-              </th>
-              <th className="sensor-data-col">
-                <WiThermometer size={20} title="Temperatura" />
-              </th>
-            </tr>
-            {reports.map((report, id) => (
-              <tr key={id}>
-                <td className="sensor-data-col" title={new Date(report.timestamp).toLocaleDateString('pt-BR')}>
-                  {timeFormatter(report.timestamp, false)}
-                </td>
-                <td className="sensor-data-col"> {report.beat} bpm</td>
-                <td className="sensor-data-col"> {report.spo2} %</td>
-                <td className="sensor-data-col"> {report.temp} °C</td>
-              </tr>
-            ))}
-          </tbody>
+          <div className="sensor-data-col">
+            Download CSV
+          </div>
         </table>
       </div>
     </div>
