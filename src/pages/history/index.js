@@ -22,17 +22,21 @@ const History = () => {
 
     const getRecos = () => {
         setLoader(true)
+        if (recomendations) {
+            recomendations.splice(0, recomendations.length)
+        }
         sendHttpRequest('GET', BASE_URL + '/getRecomendation', { id: '616734b0ef26eb82424b731a' }).then((data) => {
             if (data.status == 200) {
                 console.log(data)
+                debugger
                 if (name === 'doctor') {
-                    data.data.filter((item) => item.isDoctor ===true).map((recos) => {
+                    data.data.filter(item => item.isDoctor === true).map((recos) => {
                         recomendations.push(recos)
                     })
                     console.log(recomendations)
                     setLoader(false)
                 } else {
-                    data.data.filter((item) => item.isDoctor === false).map((recos) => {
+                    data.data.filter(item => item.isDoctor === false).map((recos) => {
                         recomendations.push(recos)
                     })
                     console.log(recomendations)
